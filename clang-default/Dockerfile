@@ -7,4 +7,4 @@ RUN echo 'CC="clang"' >> /etc/portage/make.conf                                 
     echo 'AR="llvm-ar"' >> /etc/portage/make.conf                                               && \
     echo 'NM="llvm-nm"' >> /etc/portage/make.conf                                               && \
     echo 'RANLIB="llvm-ranlib"' >> /etc/portage/make.conf                                       && \
-    emerge --update --deep --changed-use @world
+    emerge -ev @world
