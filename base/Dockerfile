@@ -9,7 +9,7 @@ RUN rm stage3-amd64-musl-vanilla-*.tar.bz2 portage-latest.tar.bz2
 
 FROM scratch
 COPY --from=0 /scratch /
-CMD /bin/bash --login --interactive
+CMD /bin/bash --login -i
 RUN echo 'MAKEOPTS="-j20"' >> /etc/portage/make.conf                                            && \
     cat /etc/portage/make.conf                                                                  && \
     emerge --sync
