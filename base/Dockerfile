@@ -1,7 +1,7 @@
 FROM debian:stable
 WORKDIR /scratch
 RUN apt-get update
-RUN apt-get -y install wget
+RUN apt-get -y install wget lbzip2
 RUN wget -r -l1 --no-parent -nd -A'stage3-amd64-musl-vanilla-*.tar.bz2' http://distfiles.gentoo.org/experimental/amd64/musl/
 RUN wget http://distfiles.gentoo.org/snapshots/portage-latest.tar.bz2
 RUN tar xf stage3-amd64-musl-vanilla-*.tar.bz2
