@@ -1,4 +1,4 @@
-FROM builder:bionic
+FROM mhier/docker-non-gnu-gentoo:clang-installed
 WORKDIR /scratch
 RUN apt-get update
 RUN apt-get -y install wget
